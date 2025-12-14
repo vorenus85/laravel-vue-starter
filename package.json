@@ -10,7 +10,7 @@
         "dev": "vite",
         "lint-staged": {
             "*.{js,vue}": [
-                "prettier --write",
+                "prettier --write \"resources/js/**/*.{js,vue}\"",
                 "eslint --fix",
                 "git add"
             ]
