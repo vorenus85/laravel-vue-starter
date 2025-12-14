@@ -1,4 +1,5 @@
 import vue from 'eslint-plugin-vue'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
     {
@@ -24,4 +25,5 @@ export default [
         },
     },
     ...vue.configs['flat/recommended'],
+    eslintConfigPrettier,
 ]

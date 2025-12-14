@@ -1,9 +1,7 @@
 <template>
     <AppLayout>
         <h2 class="text-2xl font-bold">Welcome 👋</h2>
-        <p class="mt-2 text-gray-600">
-            Az AppLayout működik 🎉
-        </p>
+        <p class="mt-2 text-gray-600">Az AppLayout működik 🎉</p>
     </AppLayout>
 </template>
 
