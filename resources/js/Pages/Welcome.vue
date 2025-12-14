@@ -6,6 +6,5 @@
 </template>
 
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
-var i = 1;
+import AppLayout from '@/Layouts/AppLayout.vue';
 </script>
