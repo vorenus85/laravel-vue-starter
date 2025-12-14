@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
-    <title>Laravel Vue Starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title inertia>{{ config('app.name', 'Laravel') }}</title>
     @vite('resources/js/app.js')
     @inertiaHead
 </head>

@@ -16,6 +16,7 @@
         "vite": "^7.0.7"
     },
     "dependencies": {
-        "@inertiajs/vue3": "^2.3.1"
+        "@inertiajs/vue3": "^2.3.1",
+        "pinia": "^3.0.4"
     }
 }
