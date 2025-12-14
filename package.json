@@ -6,6 +6,7 @@
         "build": "vite build",
         "lint": "eslint resources/js --ext .js,.vue",
         "format": "prettier --write \"resources/js/**/*.{js,vue}\"",
+        "format:check": "prettier --check \"resources/js/**/*.{js,vue}\"",
         "dev": "vite"
     },
     "devDependencies": {
