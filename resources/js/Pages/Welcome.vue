@@ -7,4 +7,5 @@
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
+var i = 1;
 </script>
