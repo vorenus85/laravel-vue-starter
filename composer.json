@@ -2,10 +2,15 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
     "type": "project",
+    "author": "Janos Perge",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
         "laravel",
-        "framework"
+        "framework",
+        "vue",
+        "pinia",
+        "primevue",
+        "inertia"
     ],
     "license": "MIT",
     "require": {
