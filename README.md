@@ -1,13 +1,19 @@
 # Laravel + PrimeVue Starter Kit
 
+## 💡 Two ways to run this project
+
+- Classic local setup (PHP + Node + WAMP)
+- Docker-based setup (recommended)
+
 ## 🚀 1. System Requirements
 
-- **PHP >= 8.2**
+- **PHP >= 8.5**
 - **Composer >= 2.0**
 - **Node.js >= 22 & npm**
 - **MySQL / PostgreSQL / SQLite**
 - **Git**
-- *(Optional)* WAMP / XAMPP for local hosting
+- **Docker**
+- _(Optional)_ WAMP / XAMPP for local hosting
 
 ---
 
@@ -16,11 +22,12 @@
 ### 2.1 Clone the repository
 
 ```bash
-git clone https://github.com/vorenus85/laravel-vue-starter
-cd laravel-vue-starter
+git clone https://github.com/vorenus85/laravel-vue-starter-rest-api
+cd laravel-vue-starter-rest-api
 ```
 
 ### 2.2 Install PHP dependencies
+
 ```bash
 composer install
 ```
@@ -108,16 +115,93 @@ To access the project via a custom local domain (e.g. laravel-vue-starter.local)
 ### Update .env
 
 ```env
-APP_URL=http://laravel-vue-starter.local
+APP_URL=http://localhost:8080
 ```
 
-## 🧪 6. Run Tests
+## 🐳 6. Running the project with Docker (recommended)
+
+This project can also be run using **Docker + Docker Compose**, without installing PHP, Composer, Node.js or a web server locally.
+
+### Prerequisites
+
+- Docker Desktop (Windows / macOS / Linux)
+- Docker Compose v2+
+
+Verify installation:
+
+```bash
+docker --version
+docker compose version
+```
+
+### Start the application
+
+From the project root directory:
+
+```bash
+docker compose up -d
+```
+
+### Install dependencies
+
+Backend (Laravel / PHP):
+
+```bash
+docker compose exec app composer install
+```
+
+Frontend (Vite / Node):
+
+```bash
+docker compose exec app npm install
+```
+
+### Environment file
+
+```bash
+cp .env.example .env
+docker compose exec app php artisan key:generate
+```
+
+### Database migration & seeding
+
+```bash
+docker compose exec app php artisan migrate --seed
+```
+
+### Run Vite
+
+```bash
+docker compose exec app npm run dev
+```
+
+### Access the application
+
+```bash
+http://localhost:8080
+```
+
+(Port depends on docker-compose.yml configuration.)
+
+### Stop containers
+
+```bash
+docker compose down
+```
+
+### Notes
+
+- Docker replaces WAMP / XAMPP
+- No local PHP, Composer or Node.js installation required
+- Recommended for consistent team development
+
+## 🧪 7. Run Tests
 
 ```bash
 composer test
 ```
 
-## 🧹 7. Useful Commands
+## 🧹 8. Useful Commands
 
 | Command                            | Description                     |
 | ---------------------------------- | ------------------------------- |
